@@ -1,0 +1,79 @@
+{
+    "extends": "molindo/react",
+    "plugins": [
+        "react-hooks",
+        "formatjs"
+    ],
+    "settings": {
+        "react": {
+            "createClass": "createReactClass",
+            "pragma": "React",
+            "version": "16.8"
+        },
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".js",
+                    ".jsx"
+                ],
+                "paths": [
+                    "node_modules",
+                    "src"
+                ]
+            }
+        }
+    },
+    "env": {
+        "browser": true,
+        "jest": true,
+        "es6": true
+    },
+    "rules": {
+        "prefer-template": 1,
+        "formatjs/no-offset": "error",
+        "formatjs/enforce-description": 2,
+        "no-use-before-define": "ERROR",
+        "react-hooks/rules-of-hooks": "ERROR",
+        "react-hooks/exhaustive-deps": "ERROR",
+        "import/no-extraneous-dependencies": [
+            "ERROR",
+            {
+                "devDependencies": [
+                    "webpack.config.js",
+                    "src/setupTests.js",
+                    "src/stories/*.*",
+                    "**/__testUtils__/**/*.*",
+                    "**/__tests__/**/*-test.*",
+                    "storybook/**/*.*",
+                    "src/**/*.stories.*",
+                    "src/**/*.story.*"
+                ]
+            }
+        ],
+        "prettier/prettier": [
+            "ERROR",
+            {
+                "bracketSpacing": true,
+                "singleQuote": false,
+                "semi": false,
+                "tabWidth": 4,
+                "printWidth": 80,
+                "trailingComma": "all"
+            }
+        ],
+        "react/jsx-filename-extension": "ERROR",
+        "dot-notation": [
+            "error",
+            {
+                "allowKeywords": true
+            }
+        ]
+    },
+    "globals": {
+        "cy": false,
+        "Cypress": false,
+        "global": true,
+        "process": false,
+        "module": false
+    }
+}
