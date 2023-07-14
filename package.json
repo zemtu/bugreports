@@ -43,9 +43,9 @@
     "eslint-plugin-react": "7.18.0",
     "eslint-plugin-react-hooks": "2.3.0",
     "husky": "^4.0.10",
-    "node-sass": "4.13.1",
+    "node-sass": "9.0.0",
     "prettier": "1.19.1",
-    "react-scripts": "3.3.0"
+    "react-scripts": "5.0.1"
   },
   "husky": {
     "hooks": {
